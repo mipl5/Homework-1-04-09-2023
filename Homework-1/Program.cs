@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,18 @@ namespace Homework_1
             int second_int_num = int.Parse(Console.ReadLine());
             int sum = first_int_num + second_int_num;
             Console.WriteLine("The sum of the two numbers is:"+sum);
+            Console.WriteLine("From which number would you like to subtract the other number? From the first number (1) or from the second number (2)?");
+            byte question = byte.Parse(Console.ReadLine());
+            if (question == 1)
+            {
+                int sub = first_int_num - second_int_num;
+                Console.WriteLine("The difference between the two numbers is:"+sub);
+            }
+            else if (question == 2)
+            {
+                int sub = first_int_num - second_int_num;
+                Console.WriteLine("The difference between the two numbers is:" + sub);
+            }
             int mul = first_int_num * second_int_num;
             Console.WriteLine("The product of the two numbers is:"+mul);
             double the_exact_division_result;
