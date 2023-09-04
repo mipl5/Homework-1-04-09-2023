@@ -15,40 +15,57 @@ namespace Homework_1
             int height_cm;
             Console.WriteLine("Please enter your height in centimeters:");
             height_cm = int.Parse(Console.ReadLine());
-            double height_m = (double) height_cm / 100;
-            Console.WriteLine("The measurement of your height in meters is:"+height_m);
+            double height_m = (double)height_cm / 100;
+            Console.WriteLine("The measurement of your height in meters is:" + height_m);
             double height_inches = (double)height_cm / 2.54;
-            Console.WriteLine("The measurement for your height in inches is:"+height_inches);
+            Console.WriteLine("The measurement for your height in inches is:" + height_inches);
             // Answer to the second exercise:
             Console.WriteLine("Please, enter the first number here:");
             int first_int_num = int.Parse(Console.ReadLine());
             Console.WriteLine("Please, enter the second number here:");
             int second_int_num = int.Parse(Console.ReadLine());
             int sum = first_int_num + second_int_num;
-            Console.WriteLine("The sum of the two numbers is:"+sum);
+            Console.WriteLine("The sum of the two numbers is:" + sum);
             Console.WriteLine("From which number would you like to subtract the other number? From the first number (1) or from the second number (2)?");
             byte question = byte.Parse(Console.ReadLine());
             if (question == 1)
             {
                 int sub = first_int_num - second_int_num;
-                Console.WriteLine("The difference between the two numbers is:"+sub);
+                Console.WriteLine("The difference between the two numbers is:" + sub);
             }
             else if (question == 2)
             {
                 int sub = second_int_num - first_int_num;
                 Console.WriteLine("The difference between the two numbers is:" + sub);
             }
-            else{
+            else
+            {
                 Console.WriteLine(false);
             }
             int mul = first_int_num * second_int_num;
-            Console.WriteLine("The product of the two numbers is:"+mul);
+            Console.WriteLine("The product of the two numbers is:" + mul);
             double the_exact_division_result;
-            the_exact_division_result = (double)first_int_num / second_int_num;
-            Console.WriteLine("The exact division result is:" + the_exact_division_result);
             double the_inaccurate_division_result;
-            the_inaccurate_division_result = first_int_num / second_int_num;
-            Console.WriteLine("The inaccurate division result is:" + the_inaccurate_division_result);
+            Console.WriteLine("What number do you want to divide by another number? The first number (1) or from the second number (2)?");
+            byte question_se = byte.Parse(Console.ReadLine());
+            if (question_se == 1)
+            {
+                the_exact_division_result = (double)first_int_num / second_int_num;
+                Console.WriteLine("The exact division result is:" + the_exact_division_result);
+                the_inaccurate_division_result = first_int_num / second_int_num;
+                Console.WriteLine("The inaccurate division result is:" + the_inaccurate_division_result);
+            }
+            else if (question_se == 2)
+            {
+                the_exact_division_result = (double)second_int_num / first_int_num;
+                Console.WriteLine("The exact division result is:" + the_exact_division_result);
+                the_inaccurate_division_result = second_int_num / first_int_num;
+                Console.WriteLine("The inaccurate division result is:" + the_inaccurate_division_result);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
             Console.ReadKey();
         }
     }
