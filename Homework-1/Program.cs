@@ -35,7 +35,7 @@ namespace Homework_1
             }
             else if (question == 2)
             {
-                int sub = first_int_num - second_int_num;
+                int sub = second_int_num - first_int_num;
                 Console.WriteLine("The difference between the two numbers is:" + sub);
             }
             int mul = first_int_num * second_int_num;
