@@ -38,6 +38,9 @@ namespace Homework_1
                 int sub = second_int_num - first_int_num;
                 Console.WriteLine("The difference between the two numbers is:" + sub);
             }
+            else{
+                Console.WriteLine(false);
+            }
             int mul = first_int_num * second_int_num;
             Console.WriteLine("The product of the two numbers is:"+mul);
             double the_exact_division_result;
